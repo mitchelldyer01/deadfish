@@ -1,5 +1,5 @@
 import { main } from './main';
-import { MockWrapper as diceWrapper } from './dice/MockWrapper';
+import { MockWrapper as diceWrapper } from '../dice/MockWrapper';
 
 describe('main', () => {
   beforeEach(() => {

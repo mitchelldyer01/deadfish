@@ -1,5 +1,5 @@
 import { Wrapper as diceWrapper } from './dice/Wrapper';
-import { main } from './main';
+import { main } from './main/main';
 
 // Injecting this wrapper at runtime because
 // jest cannot parse the underlying module.
@@ -16,4 +16,4 @@ dice.assetPath = 'assets/';
 // Assumes you have <script></script>
 // tags in your html.
 
-window.onload = main(dice);
+window.onload = () => { main(dice) };

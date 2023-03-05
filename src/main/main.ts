@@ -1,6 +1,6 @@
-import { Builder as btnBuilder } from './elements/button/button';
-import { IWrapper as diceIWrapper } from './dice/IWrapper';
-import { Builder as divBuilder } from './elements/div/div';
+import { Builder as btnBuilder } from '../elements/button/button';
+import { IWrapper as diceIWrapper } from '../dice/IWrapper';
+import { Builder as divBuilder } from '../elements/div/div';
 
 export function main(dice: diceIWrapper): any {
   const body = document.body;
@@ -13,7 +13,6 @@ export function main(dice: diceIWrapper): any {
     .Id('dice-box')
     .Render();
   body?.appendChild(diceDiv);
-
 
   const newGameBtn: HTMLButtonElement = new btnBuilder()
     .Id('new-game')
