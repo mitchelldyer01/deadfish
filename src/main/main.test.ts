@@ -6,10 +6,10 @@ describe('main', () => {
     document.body = document.createElement('body');
   });
 
-  it('main() should add a paragraph and buttons to the body', () => {
+  it('main() should add a header and buttons to the body', () => {
     const dice: diceWrapper = new diceWrapper();
     main(dice);
-    expect(document.body.querySelector('p').textContent).toMatch(/Hello, World/);
+    expect(document.body.querySelector('h1').textContent).toMatch(/deadfish/);
     expect(document.getElementById('roll-btn').innerText).toMatch(/Roll/);
   });
 
