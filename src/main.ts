@@ -1,7 +1,8 @@
 import { Builder as btnBuilder } from './elements/button/button';
-import { Builder as diceBuilder } from './dice/DiceWrapper';
+import { IWrapper as diceIWrapper } from './dice/IWrapper';
 import { Builder as divBuilder } from './elements/div/div';
-export function main() {
+
+export function main(dice: diceIWrapper): any {
   const body = document.body;
 
   const p = document.createElement('p');
@@ -13,14 +14,12 @@ export function main() {
     .Render();
   body?.appendChild(diceDiv);
 
-  const dice: diceBuilder = new diceBuilder().Id('#dice-box').AssetPath('assets/');
-  dice.Roll('2d20');
 
   const newGameBtn: HTMLButtonElement = new btnBuilder()
     .Id('new-game')
     .Text('New Game')
+    .OnClick(() => {dice.Roll('4d6')})
     .Render();
   body?.appendChild(newGameBtn);
 }
 
-window.onload = main;

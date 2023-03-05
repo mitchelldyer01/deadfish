@@ -1,4 +1,5 @@
 import { main } from './main';
+import { MockWrapper as diceWrapper } from './dice/MockWrapper';
 
 describe('main', () => {
   beforeEach(() => {
@@ -6,7 +7,8 @@ describe('main', () => {
   });
 
   it('main() should add a paragraph and buttons to the body', () => {
-    main();
+    const dice: diceWrapper = new diceWrapper();
+    main(dice);
     expect(document.body.querySelector('p').textContent).toMatch(/Hello, World/);
     expect(document.getElementById('new-game').innerText).toMatch(/New Game/);
   });
