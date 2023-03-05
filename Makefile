@@ -1,5 +1,5 @@
 build: test
-	npx webpack
+	npx webpack 
 
 test:
-	node_modules/.bin/jest
+	node_modules/.bin/jest --silent

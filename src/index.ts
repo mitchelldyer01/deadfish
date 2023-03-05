@@ -1,7 +1,20 @@
-export function index() {
-  const body = document.body;
-  const p    = document.createElement('p');
+import { Wrapper as diceWrapper } from './dice/Wrapper';
+import { main } from './main/main';
 
-  p.textContent = 'Hello, World';
-  body?.appendChild(p);
-}
+// Injecting this wrapper at runtime because
+// jest cannot parse the underlying module.
+// I actually kind of like the idea of isolating 
+// an untyped javascript module my test framework
+// won't parse.
+
+const dice: diceWrapper = new diceWrapper()
+
+dice.id        = '#dice-box';
+dice.assetPath = 'assets/';
+dice.canvasId  = 'dice-canvas';
+
+// Launch main() when the page loads.
+// Assumes you have <script></script>
+// tags in your html.
+
+window.onload = () => { main(dice) };
