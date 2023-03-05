@@ -51,6 +51,7 @@ export function main(dice: diceIWrapper): any {
 
   dice.Build();
   dice.Init();
+  dice.Roll('6d6');
 
   const standBtn: HTMLButtonElement = new btnBuilder()
     .Id('stand-btn')
