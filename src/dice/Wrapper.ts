@@ -19,7 +19,7 @@ export class Wrapper implements IWrapper {
   }
 
   Init(): void {
-    this.dice.init().then(() => { this.dice.roll('6d6') });
+    this.dice.init();
 
     let canvas = document.getElementById('dice-canvas');
     if (canvas != null) {
