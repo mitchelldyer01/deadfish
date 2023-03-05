@@ -6,7 +6,7 @@ export class MockWrapper implements IWrapper {
 
   Init(): void { console.log(''); }
 
-  Roll(qty: string): void {
-    console.log(qty);
+  async Roll(qty: string): Promise<number> {
+      return await 0+1;
   }
 }

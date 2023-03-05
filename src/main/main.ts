@@ -16,10 +16,20 @@ export function main(dice: diceIWrapper): any {
     .Render();
   container?.appendChild(row);
 
+  const leftCol: HTMLDivElement = new divBuilder()
+    .Classes(['col'])
+    .Render();
+  row?.appendChild(leftCol);
+
   const column: HTMLDivElement = new divBuilder()
     .Classes(['col'])
     .Render();
   row?.appendChild(column);
+
+  const rightCol: HTMLDivElement = new divBuilder()
+    .Classes(['col'])
+    .Render();
+  row?.appendChild(rightCol)
 
   const board: HTMLDivElement = new divBuilder()
     .Classes(['p-4', 'border', 'bg-light'])
@@ -42,7 +52,11 @@ export function main(dice: diceIWrapper): any {
     .Id('roll-btn')
     .Text('Roll')
     .Classes(['btn', 'btn-outline-primary'])
-    .OnClick(() => {dice.Roll('4d6')})
+    .OnClick(async () => {
+        rollBtn.disabled = true;
+        await dice.Roll('4d6')
+        rollBtn.disabled = false;
+    })
     .Render();
   board?.appendChild(rollBtn);
 }
