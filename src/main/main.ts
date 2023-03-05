@@ -50,7 +50,7 @@ export function main(dice: diceIWrapper): any {
   board?.appendChild(diceDiv);
 
   dice.Build();
-  dice.Init()
+  dice.Init();
 
   const standBtn: HTMLButtonElement = new btnBuilder()
     .Id('stand-btn')
