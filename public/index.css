@@ -7,15 +7,15 @@
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   canvas {
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 300px;
   }
 }
 
 @media only screen and (min-width: 901px) {
   canvas {
-    width: 800px;
-    height: 800px;
+    width: 500px;
+    height: 300px;
   }
 }
 
