@@ -1,6 +1,5 @@
 export interface IWrapper {
-  assetPath: string;
-  id: string;
-
+  Build(): void;
+  Init(): void;
   Roll(qty: string): void;
 }

@@ -9,8 +9,9 @@ import { main } from './main/main';
 
 const dice: diceWrapper = new diceWrapper()
 
-dice.id        = '#dice-box'
+dice.id        = '#dice-box';
 dice.assetPath = 'assets/';
+dice.canvasId  = 'dice-canvas';
 
 // Launch main() when the page loads.
 // Assumes you have <script></script>

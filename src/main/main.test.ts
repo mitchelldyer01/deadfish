@@ -10,7 +10,7 @@ describe('main', () => {
     const dice: diceWrapper = new diceWrapper();
     main(dice);
     expect(document.body.querySelector('p').textContent).toMatch(/Hello, World/);
-    expect(document.getElementById('new-game').innerText).toMatch(/New Game/);
+    expect(document.getElementById('roll-btn').innerText).toMatch(/Roll/);
   });
 
 });
