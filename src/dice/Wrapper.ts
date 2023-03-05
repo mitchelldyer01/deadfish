@@ -20,6 +20,11 @@ export class Wrapper implements IWrapper {
 
   Init(): void {
     this.dice.init();
+
+    let canvas = document.getElementById('dice-canvas');
+    if (canvas != null) {
+        canvas.className = 'rounded, border, bg-light';
+    }
   }
 
   async Roll(qty: string): Promise<number> {

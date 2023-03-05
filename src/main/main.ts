@@ -41,7 +41,6 @@ export function main(dice: diceIWrapper): any {
   column?.appendChild(header);
 
   const board: HTMLDivElement = new divBuilder()
-    .Classes(['p-4', 'rounded', 'border', 'bg-light'])
     .Render();
   column?.appendChild(board);
 
