@@ -11,6 +11,7 @@ describe('main', () => {
     main(dice);
     expect(document.body.querySelector('h1').textContent).toMatch(/deadfish/);
     expect(document.getElementById('roll-btn').innerText).toMatch(/Roll/);
+    expect(document.getElementById('stand-btn').innerText).toMatch(/Stand/);
   });
 
 });
